@@ -8,4 +8,4 @@ def mostrar_bienvenida(request):
     return HttpResponse(f"Bienvenidos a mi app Django, {tu_nombre}!")
 
 def home(request):
-    return HttpResponse("Quetu ace aca?? vete a jugar ROCKET LEAGUE")
+    return HttpResponse("Quetu ace aca?? vete a jugar ROCKET LEAGUE!!!!")
