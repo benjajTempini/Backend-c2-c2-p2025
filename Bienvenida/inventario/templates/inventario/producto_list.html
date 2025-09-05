@@ -1,20 +1,7 @@
-<!-- inventario/templates/inventario/producto_list.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Lista de Productos</title>
-</head>
-<body>
-    <h1>Productos</h1>
-    <a href="{% url 'producto_create' %}">Agregar Producto</a>
-    <ul>
-    {% for producto in object %}
-        <li>
-            <a href="{% url 'producto_detail' producto.pk %}">{{ producto.nombre }}</a>
-        </li>
-    {% empty %}
-        <li>No hay productos.</li>
-    {% endfor %}
-    </ul>
-</body>
-</html>
+{% extends 'inventario/base.html' %}
+{% block title %} Vista Productos | 💻{% endblock %}
+
+{% block header %} header{% endblock  %}
+{% block breadcrumb %} {% endblock  %}
+{% block content %} {% endblock  %}
+{% block footer%}{% endblock  %}

@@ -9,5 +9,5 @@ urlpatterns = [
     path('mostrar_bienvenida/', views.mostrar_bienvenida),
     path('', views.home),
 
-    path('', include('inventario.urls')),
+    path('inventario/', include('inventario.urls')),
 ]

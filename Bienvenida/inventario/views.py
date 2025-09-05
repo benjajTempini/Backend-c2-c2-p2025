@@ -43,3 +43,6 @@ def producto_delete(request, pk):
         producto.delete()
         return redirect('producto_list')
     return render(request, 'inventario/producto_confirm_delete.html', {'object': producto})
+
+def base(request):
+    return render(request, 'inventario/base.html')
