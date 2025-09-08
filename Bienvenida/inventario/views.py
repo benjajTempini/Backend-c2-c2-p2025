@@ -6,12 +6,12 @@ from .forms import ProductoForm
 
 def producto_list(request):
     productos = Producto.objects.all()
-    return render(request, 'inventario/producto_list.html', {'object': productos})
+    return render(request, 'inventario/producto_list.html', {'productos': productos})
 
 
 def producto_detail(request, pk):
     producto = get_object_or_404(Producto, pk=pk)
-    return render(request, 'inventario/producto_detail.html', {'object': producto})
+    return render(request, 'inventario/producto_detail.html', {'producto': producto})
 
 
 def producto_create(request):

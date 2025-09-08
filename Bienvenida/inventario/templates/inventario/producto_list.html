@@ -1,7 +1,36 @@
 {% extends 'inventario/base.html' %}
 {% block title %} Vista Productos | 💻{% endblock %}
 
-{% block header %} header{% endblock  %}
-{% block breadcrumb %} {% endblock  %}
-{% block content %} {% endblock  %}
-{% block footer%}{% endblock  %}
+{% block header %}
+<header>
+    <a class="text-cyan-500 underline" href="/inventario/base/">Base</a>
+    <a class="text-cyan-500 underline" href="/inventario/nuevo/">Nuevo producto</a>
+</header>
+{% endblock  %}
+{% block breadcrumb %}
+
+Vista Producto
+{% endblock  %}
+{% block content %}
+<section>
+    <h2>Productos disponible</h2>
+    <h2>Aqui encontraras los mejores productos</h2>
+    <ul>
+        {% for producto in productos %}
+        <li class="flex flex-col gap-1">
+            <span>{{ producto.nombre }}</span>
+            <span>{{ producto.precio }}</span>
+            <span>{{ producto.descripcion }}</span>
+            <span>{{ producto.stock }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock  %}
+{% block footer%}
+<footer>
+    <span>
+        <h5 style="text-align: center; position: absolute; bottom: 0; width: 100%;">©️ Derechos de autor reservados</h5>
+    </span>
+</footer>
+{% endblock  %}

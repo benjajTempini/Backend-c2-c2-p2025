@@ -7,5 +7,5 @@ class Producto(models.Model):
     descripcion = models.CharField(max_length=1000)
     stock = models.IntegerField(default=0)
 
-def __str__(self):
-    return self.nombre
+    def __str__(self):
+        return self.nombre
